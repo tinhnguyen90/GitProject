@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sumOfListPrime(x) {
+        let count = 0
+        for (let i = 2; i < x; i++) {
+            let check = true
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    check = false
+                    break
+                }
+            }
+            if (check) {
+                count += i
+            }
+        }
+        return count
+    }
+
+    let x = parseInt(prompt("Nhap so"))
+    let result = sumOfListPrime(x)
+    document.write("Tổng =" + result)
+</script>
+</body>
+</html>
